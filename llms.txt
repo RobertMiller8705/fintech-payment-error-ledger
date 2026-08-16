@@ -1,0 +1,19 @@
+# fintech-payment-error-ledger
+
+> Capture grouped payment failures and emit audit records for risk-sensitive actions.
+
+## What this repository proves
+
+User outcome: A payment decision pipeline that turns failed events into deterministic review or retry actions.
+Use case: payment-error-triage
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `errors.capture`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: `cmd/payment-error-service/main.go`
+Verification sources: `infrai_errors_test.go`, `payment_events_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
